@@ -1,0 +1,137 @@
+/* Estilo geral */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at center, #0d0d0d, #000);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+    overflow-x: hidden;
+}
+
+/* Título com animação */
+.titulo-animado {
+    color: #ff0000;
+    font-size: 2.5em;
+    animation: brilho 2s infinite alternate;
+}
+
+/* Animação de brilho no título */
+@keyframes brilho {
+    0% { text-shadow: 0 0 5px #ff0000; }
+    100% { text-shadow: 0 0 25px #ff4d4d; }
+}
+
+/* Texto introdutório */
+.texto-intro {
+    font-size: 18px;
+    margin-top: 15px;
+    opacity: 0;
+    animation: aparecer 1.5s forwards;
+}
+
+/* Animação de fade-in */
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Imagem com efeito de zoom */
+.imagem-zoom {
+    margin-top: 25px;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.imagem-zoom:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff0000;
+}
+
+/* Botões com efeito */
+button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #ff0000;
+    padding: 12px 25px;
+    margin: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de brilho nos botões */
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75px;
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 0, 0, 0.4);
+    transform: skewX(-20deg);
+    transition: 0.5s;
+}
+
+button:hover::before {
+    left: 120%;
+}
+
+/* Efeito de cor e sombra no hover */
+button:hover {
+    background-color: #ff0000;
+    color: #000000;
+    box-shadow: 0 0 15px #ff0000, 0 0 40px #ff3333;
+    transform: scale(1.05);
+}
+
+/* Menu centralizado */
+.menu {
+    margin-top: 30px;
+}
+
+/* Animação de entrada suave para o conteúdo */
+h1, p, img, button {
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+img:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  img {
+    filter: drop-shadow(0 10px 30px rgba(255, 0, 0, 0.2));
+  }
+  body {
+    background: linear-gradient(-45deg, #000, #111, #222, #000);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .fade {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
