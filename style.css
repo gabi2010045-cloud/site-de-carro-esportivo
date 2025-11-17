@@ -24,7 +24,7 @@ body {
 
 /* Texto introdutório */
 .texto-intro {
-    font-size: 18px;
+    font-size: 40px;
     margin-top: 15px;
     opacity: 0;
     animation: aparecer 1.5s forwards;
@@ -135,3 +135,54 @@ img:hover {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  p {
+    font-size: 35px;
+  }
+  h1 {
+    font-size: 45px; /* aumenta o tamanho */
+    font-weight: bold; /* deixa mais grosso */
+  }
+ 
+  /* MENU LATERAL À DIREITA */
+.menu-lateral {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* efeito de vidro futurista */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px 25px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+/* Botões dentro da barra */
+.menu-lateral button {
+  width: 120px;
+}
+/* Quadrado futurista nos textos (mesmo estilo do menu lateral) */
+.texto-vidro {
+  display: inline-block;
+  padding: 20px 35px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);
+  margin-bottom: 25px;
+  animation: fadeIn 1.5s ease;
+  transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.texto-vidro:hover {
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.4);
+  transform: scale(1.03);
+}
+
